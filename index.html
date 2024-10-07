@@ -1,86 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rinterio</title> 
-    <!-- Manrope Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <!-- DaisyUI -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/0ff431a753.js" crossorigin="anonymous"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              clifford: '#da373d',
-              btnprimary: '#ABEF5F',
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rinterio</title>
+  <!-- Manrope Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <!-- DaisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/0ff431a753.js" crossorigin="anonymous"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            btnprimary: '#ABEF5F',
+            lightbg: 'f4f4f4',
           }
         }
       }
-    </script>
-    <style>
-      .font-manrope{
-        font-family: manrope;
-      }
-    </style>
+    }
+  </script>
+  <style>
+    .font-manrope {
+      font-family: manrope;
+    }
+  </style>
 </head>
+
 <body class="font-manrope">
-   <section class="nav-hero py-8 md:px-28">
+  <section class="nav-hero py-8 md:px-28">
     <div class="max-w-[1440px] m-auto">
       <div class="navbar bg-base-100">
-          <div class="navbar-start">
-            <a class="btn btn-ghost text-xl"><img src="assets/logo.png" class="w-32" alt=""></a>
-          </div>
-          <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
-              <li><a href="" class="font-bold">Home</a></li>
-              <li><a href="">Services</a></li>
-              <li><a href="">Portfolio</a></li>
-              <li><a href="">Blogs</a></li>
-              <li><a href="">Contact Us</a></li>
-            </ul>
-          </div>
-          <div class="navbar-end">
-            <i class="fa-solid fa-magnifying-glass p-2 mx-2 hidden md:block"></i>
-            <i class="fa-solid fa-cart-shopping p-2 mx-2 hidden md:block"></i>
-            <a class="btn bg-[#ABEF5F] rounded-[50px] font-extrabold hidden md:flex">Book Consult
-              <img class="w-[25px]" src="./assets/arrow-up-dark.svg" alt=""
-          /></a>
-          </div>
-          <div class="dropdown"></div>
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h8m-8 6h16" />
-              </svg>
-            </div>
-          </div>     
-          </div>
-      </div>
-      <div class="md:py-10 flex justify-center flex-col items-center gap-6 md:gap-7">
-        <div><img src="assets/banner.png" alt=""></div>
-        <div><h1 class="md:text-7xl text-4xl font-extrabold text-center tracking-tight text-[#212121]">A barn house of this design has a</br>striking appearance</h1></div>
-        <p class="md:w-8/12 text-center">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with natural light.</p>
-        <a class="btn bg-[#ABEF5F80] rounded-[50px] font-bold md:px-4 px-20">View Details
-          <img class="w-[25px]" src="./assets/arrow-up.svg" alt=""
-      /></a>
+        <div class="navbar-start">
+          <a class="btn btn-ghost text-xl"><img src="assets/logo.png" class="w-32" alt=""></a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a href="" class="font-bold">Home</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">Pricing</a></li>
+            <li><a href="">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <i class="fa-solid fa-magnifying-glass p-2 mx-2 hidden md:block"></i>
+          <i class="fa-solid fa-cart-shopping p-2 mx-2 hidden md:block"></i>
+          <a class="btn bg-[#ABEF5F] rounded-[50px] font-extrabold hidden md:flex">Book Consult
+            <img class="w-[25px]" src="./assets/arrow-up-dark.svg" alt="" /></a>
+        </div>
+        <div class="dropdown"></div>
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </div>
       </div>
     </div>
-   </section> 
+    </div>
+    <div class="md:py-10 flex justify-center flex-col items-center gap-6 md:gap-7">
+      <div><img src="assets/banner.png" alt=""></div>
+      <div>
+        <h1 class="md:text-7xl text-4xl font-extrabold text-center tracking-tight text-[#212121]">A barn house of this
+          design has a</br>striking appearance</h1>
+      </div>
+      <p class="md:w-8/12 text-center">The barn house captivates with its blend of rustic charm and modern
+        sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with
+        natural light.</p>
+      <a class="btn bg-[#ABEF5F80] rounded-[50px] font-bold md:px-4 px-20">View Details
+        <img class="w-[25px]" src="./assets/arrow-up.svg" alt="" /></a>
+    </div>
+    </div>
+  </section>
+
+  <!-- About us section -->
+  <section class="about-us md:py-12 py-8 md:px-28 px-5 bg-[#f4f4f4]">
+    <div class="max-w-[1440px] m-auto">
+      <div class="grid md:grid-cols-2 gap-9 items-center">
+        <div>
+          <img class="-ml-9 mb-6" src="assets/Vector.png" alt="Design Accent">
+          <div class="bg-white inline-block px-4 py-2 rounded-2xl">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-arrow-right"></i>
+              <p class="font-bold">About Us</p>
+            </div>
+          </div>
+          <h2 class="md:text-5xl text-2xl font-extrabold pt-4 pb-4">We design thoughtful,<br /> liveable spaces</h2>
+          <p class="mb-4">Our philosophy focuses on creating spaces that inspire and elevate everyday living. Whether
+            it's a cozy home or a dynamic office, we blend aesthetics with functionality to deliver outstanding results.
+          </p>
+          <div class="flex items-center gap-4 px-4 bg-white rounded-lg py-10 mb-4">
+            <div><img src="assets/commercial.png" alt="Commercial Design Icon"></div>
+            <div>
+              <h3 class="font-extrabold text-lg">Commercial Design</h3>
+              <p>We transform workspaces into environments that encourage productivity and creativity while maintaining
+                the perfect balance between elegance and practicality.</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 px-4 bg-white rounded-lg py-10 mb-4">
+            <div><img src="assets/residential.png" alt="Residential Design Icon"></div>
+            <div>
+              <h3 class="font-extrabold text-lg">Residential Design</h3>
+              <p>From urban apartments to countryside homes, we craft interiors that reflect your personality and
+                provide a sense of comfort and style for everyday living.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <img src="assets/Rectangle.png" alt="Design Showcase Image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Our works section start -->
+  <section class="works md:py-12 py-8 md:px-28 px-5 bg-[#f4f4f4]">
+    <div class="max-w-[1440px] m-auto">
+      <div class="flex flex-col items-center mb-4">
+        <div class="bg-white inline-block px-4 py-2 rounded-2xl">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-arrow-right"></i>
+            <p class="font-bold">How we work</p>
+          </div>
+        </div>
+        <h2 class="md:text-5xl text-2xl font-extrabold pt-4 pb-4 text-center">Our Work Process</h2>
+        <p class="mb-4 text-center md:w-6/12">From concept to completion, our process ensures attention to detail at
+          every step. We combine creativity, technical expertise, and strategic planning to deliver outstanding results
+          for every project.</p>
+      </div>
+      <div class="grid md:grid-cols-4 gap-6 md:px-28">
+        <div class="py-6 px-6 rounded-lg bg-[#E7C1D3]">
+          <img class="mb-4" src="assets/concept.png" alt="Concept">
+          <h3 class="font-extrabold text-lg mb-4">Concept</h3>
+          <p>We start by understanding your vision and needs, creating initial design concepts that lay the foundation
+            for the entire project.</p>
+        </div>
+        <div class="py-6 px-6 rounded-lg bg-[#EFDA6E]">
+          <img class="mb-4" src="assets/flow-chart.png" alt="Design Process">
+          <h3 class="font-extrabold text-lg mb-4">Design Process</h3>
+          <p>Our team meticulously develops detailed design plans, blending creativity and practicality to ensure a
+            cohesive and functional outcome.</p>
+        </div>
+        <div class="py-6 px-6 rounded-lg bg-[#A4DAC3]">
+          <img class="mb-4" src="assets/vision.png" alt="Supervision">
+          <h3 class="font-extrabold text-lg mb-4">Supervision</h3>
+          <p>Throughout the project, we provide expert supervision to ensure that every aspect is executed according to
+            the design and on schedule.</p>
+        </div>
+        <div class="py-6 px-6 rounded-lg bg-[#77AAEA]">
+          <img class="mb-4" src="assets/budget-planning.png" alt="Budget Planning">
+          <h3 class="font-extrabold text-lg mb-4">Budget Planning</h3>
+          <p>We carefully manage the budget, ensuring cost-effective solutions without compromising on quality or design
+            integrity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Our works section end -->
+
+
+  <!-- Portfolio section start -->
+  <section class="works md:py-12 py-8 md:px-28 px-5 bg-[#f4f4f4]">
+    <div class="max-w-[1440px] m-auto">
+      <div class="flex flex-col items-center mb-4">
+        <div class="inline-block px-4 py-2 rounded-2xl bg-[#acef5f73]">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-arrow-right"></i>
+            <p class="font-bold">Explore our Latest Works</p>
+          </div>
+        </div>
+        <h2 class="md:text-5xl text-2xl font-extrabold pt-4 pb-4 text-center">Our Latest Portfolio</h2>
+        <p class="mb-4 text-center md:w-6/12">Discover a range of our recent projects, showcasing innovation, design
+          precision, and a seamless blend of aesthetic appeal and functionality.</p>
+      </div>
+      <div class="md:px-28">
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-4 md:items-center">
+          <div class="md:col-span-2 p-4 rounded-lg border border-black-600">
+            <div class="md:grid md:grid-cols-5 gap-4 md:items-center">
+              <div class="md:col-span-2">
+                <img class="size-full" src="assets/img1.png" alt="Commercial Project">
+              </div>
+              <div class="md:col-span-3">
+                <h3 class="font-extrabold text-lg mb-2 mt-2">Commercial Spaces</h3>
+                <p class="mb-4">This project focuses on creating an inviting, efficient commercial environment,
+                  balancing sleek modern designs with organic elements.</p>
+                <a href="">
+                  <div class="flex gap-2 items-center">
+                    <p class="font-bold">View Details</p>
+                    <div class="px-2 py-1 rounded-2xl bg-[#ABEF5F]"><i class="fa-solid fa-arrow-right -rotate-45"></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-lg border border-black-600 p-4">
+            <img class="size-full" src="assets/img2.png" alt="Residential Project">
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-4 grid-cols-1 md:gap-4 mt-4">
+          <div class="rounded-lg border border-black-600 p-4">
+            <img class="size-full" src="assets/img3.png" alt="Outdoor Living Project">
+          </div>
+          <div class="col-span-2 p-4 rounded-lg border border-black-600">
+            <div class="md:grid grid-cols-2 gap-4 items-center">
+              <div class="mb-4">
+                <img class="size-full" src="assets/img4.png" alt="Interior Design Project">
+              </div>
+              <div>
+                <h3 class="font-extrabold text-lg mb-2">Interior Design</h3>
+                <p class="mb-4">An elegant blend of contemporary aesthetics and timeless interior design elements to
+                  create a warm, inviting space.</p>
+                <a href="">
+                  <div class="flex gap-2 items-center">
+                    <p class="font-bold">View Details</p>
+                    <div class="px-2 py-1 rounded-2xl bg-[#ABEF5F]"><i class="fa-solid fa-arrow-right -rotate-45"></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-lg border border-black-600 p-4">
+            <img class="size-full" src="assets/img5.png" alt="Urban Architecture Project">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Pricing section start -->
+  <section class="works md:py-12 py-8 md:px-28 px-5 bg-[#f4f4f4]">
+    <div class="max-w-[1440px] m-auto">
+      <div class="flex flex-col items-center mb-4">
+        <div class="inline-block px-4 py-2 rounded-2xl bg-[#ffffff]">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-arrow-right"></i>
+            <p class="font-bold">Get an Idea About Pricing</p>
+          </div>
+        </div>
+        <h2 class="md:text-5xl text-2xl font-extrabold pt-4 pb-4 text-center">Pricing Plans</h2>
+        <p class="mb-4 text-center md:w-6/12">Choose a plan that fits your project needs. Our pricing is designed to
+          offer flexibility whether you’re working on a small project or managing multiple large-scale developments.</p>
+      </div>
+
+      <!-- main pricing start -->
+      <div class="py-2 md:py-2">
+        <div class="container mx-auto px-4">
+          <div class="pricing-plans lg:flex lg:-mx-4 mt-6 md:mt-2">
+            <!-- Basic Plan -->
+            <div class="pricing-plan-wrap lg:w-1/3 my-4 md:my-6">
+              <div
+                class="pricing-plan border-t-4 border-solid border-white bg-white text-center max-w-sm mx-auto rounded-lg">
+                <div class="p-6 md:py-8">
+                  <h4 class="font-medium leading-tight text-2xl mb-2">Basic Plan</h4>
+                  <p class="text-gray-600">Ideal for small residential projects or single-room designs</p>
+                </div>
+                <div class="pricing-amount bg-[#D4F2B1] p-6">
+                  <div><span class="text-4xl font-semibold">$499</span> /project</div>
+                </div>
+                <div class="p-6">
+                  <ul class="leading-loose">
+                    <li>Up to 2 room designs</li>
+                    <li>Initial concept and design consultation</li>
+                    <li>Basic floor plan</li>
+                    <li>Email Support</li>
+                  </ul>
+                  <div class="mt-6 py-4">
+                    <button class="bg-[#ABEF5F] text-black font-bold py-2 px-6 rounded">Get Started</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Premium Plan -->
+            <div class="pricing-plan-wrap lg:w-1/3 my-4 md:my-6">
+              <div
+                class="pricing-plan border-t-4 border-solid border-white bg-white text-center max-w-sm mx-auto rounded-lg">
+                <div class="p-6 md:py-8">
+                  <h4 class="font-medium leading-tight text-2xl mb-2">Premium Plan</h4>
+                  <p class="text-gray-600">Best for full home designs and renovations</p>
+                </div>
+                <div class="pricing-amount bg-[#D4F2B1] p-6">
+                  <div><span class="text-4xl font-semibold">$1,999</span> /project</div>
+                </div>
+                <div class="p-6">
+                  <ul class="leading-loose">
+                    <li>Full home design (up to 5 rooms)</li>
+                    <li>Personalized interior and exterior plans</li>
+                    <li>3D renderings</li>
+                    <li>Dedicated design consultant</li>
+                    <li>Email & Phone Support</li>
+                  </ul>
+                  <div class="mt-6 py-4">
+                    <button class="bg-[#ABEF5F] text-black font-bold py-2 px-6 rounded">Get Started</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Luxury Plan -->
+            <div class="pricing-plan-wrap lg:w-1/3 my-4 md:my-6">
+              <div
+                class="pricing-plan border-t-4 border-solid border-white bg-white text-center max-w-sm mx-auto rounded-lg">
+                <div class="p-6 md:py-8">
+                  <h4 class="font-medium leading-tight text-2xl mb-2">Luxury Plan</h4>
+                  <p class="text-gray-600">For high-end, bespoke home designs with extensive customization</p>
+                </div>
+                <div class="pricing-amount bg-[#D4F2B1] p-6">
+                  <div><span class="text-4xl font-semibold">$4,999</span> /project</div>
+                </div>
+                <div class="p-6">
+                  <ul class="leading-loose">
+                    <li>Unlimited room designs</li>
+                    <li>Custom interior and exterior plans</li>
+                    <li>Full 3D walkthroughs and virtual tours</li>
+                    <li>Project management and supervision</li>
+                    <li>Email, Phone & On-site Support</li>
+                  </ul>
+                  <div class="mt-6 py-4">
+                    <button class="bg-[#ABEF5F] text-black font-bold py-2 px-6 rounded">Get Started</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- Contact Us section start -->
+  <section class="contact md:py-24 py-8 md:px-28 px-5 bg-[url('assets/bg.jpg')] bg-center bg-cover">
+    <div class="max-w-[1440px] m-auto">
+      <div class="flex flex-col  items-center mb-4">
+        <div class=" inline-block px-4 py-2 rounded-2xl  bg-[#D4F2B1]">
+          <div class="flex items-center gap-2 ">
+            <i class="fa-solid fa-arrow-right"></i>
+            <p class="font-bold ">Let’s Connect</p>
+          </div>
+        </div>
+        <h2 class="md:text-5xl text-2xl font-extrabold pt-4 pb-4 text-center">Let’s Discuss Next Project</h2>
+        <p class="mb-4 text-center md:w-6/12">The barn house captivates with its blend of rustic charm and
+          modern sophistication, featuring weathered wood, sleek metal accents.</p>
+      </div>
+
+      <div class="max-w-[970px] m-auto">
+        <form action="" class="grid md:grid-cols-2 grid-cols-1 gap-6">
+          <input type="text" required class="px-4 py-4 rounded-3xl" placeholder="First Name*">
+          <input type="text" required class="px-4 py-4 rounded-3xl" placeholder="Last name*">
+          <input type="text" required class="px-4 py-4 rounded-3xl" placeholder="First Name*">
+          <input type="text" required class="px-4 py-4 rounded-3xl" placeholder="First Name*">
+          <textarea class="px-4 py-4 rounded-3xl md:col-span-2" name="" id=""
+            placeholder="Write your message here*"></textarea>
+          <button type="submit" class="md:col-span-2 bg-[#ABEF5F] px-4 py-4 rounded-3xl">
+            <div class="flex gap-2 items-center justify-center md:col-span-2 bg-[#ABEF5F] ">
+              <p class="font-bold">Send Mail</p>
+              <div class="px-2 py-1 rounded-2xl bg-[black]"><i
+                  class="fa-solid fa-arrow-right -rotate-45 text-white"></i></div>
+            </div>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer start -->
+  <section class="contact md:py-24 py-8 md:px-28 px-5 bg-[#1C1C1C] bg-center bg-cover">
+    <div class="max-w-[1440px] m-auto">
+      <div class="flex flex-col  items-center mb-4">
+        <img class="mb-4" src="assets/logo-white.svg" alt="">
+        <p class="mb-4 text-center md:w-6/12 text-[#737373]">The barn house captivates with its blend of rustic charm
+          and
+          modern sophistication, featuring weathered wood, sleek metal accents</p>
+      </div>
+      <ul class="max-w-[970px] m-auto text-[#E9E9E9] grid md:grid-cols-5 text-center gap-6">
+        <li><a href="" class="font-bold">Home</a></li>
+        <li><a href="">Services</a></li>
+        <li><a href="">Portfolio</a></li>
+        <li><a href="">Pricing</a></li>
+        <li><a href="">Contact Us</a></li>
+      </ul>
+      <div class=" text-center md:mt-6"><button type="submit" class="bg-[#ABEF5F] px-4 py-2 rounded-3xl mt-6">
+          <div class="flex gap-2 items-center justify-center bg-[#ABEF5F] ">
+            <p class="font-extrabold">Book Consult</p>
+            <div class="px-2 py-1 rounded-2xl bg-[black]"><i class="fa-solid fa-arrow-right -rotate-45 text-white"></i>
+            </div>
+          </div>
+        </button></div>
+    </div>
+  </section>
 </body>
+
 </html>
